@@ -1,0 +1,138 @@
+
+Combinatória
+Rio, 12/03/2020
+
+Variáveis de decisão, são as primeiras a serem levantadas. Depois tem a função objetiva de conclusão que deverão ser melhoradas e otimizadas.
+
+Ex1 - Descobrir o PL. 
+1) Quais são as varáveis de decisão.
+
+x1 -> número de unidades do produto tipo I a serem produzidas no próximo mês.
+x2 -> número de unidades do produto tipo II a serem produzidas no próximo mês.        
+
+2) qual é a função objetiva ou o objetivo do problema? 
+
+Aumentar o lucro. 
+lucro prod I/unidade = R$20,00
+lucro prod II/unidade = R$60,00
+
+Função de lucro = 20*x1 + 60*x2, o lucro de cada produto x1 é de 20 e o de x2 é 60, para saber o total basta somar o numero de produtos vendidos multiplicado pelo lucro unitário da venda de cada produto. 
+Essa é a função objetiva: L = 20*x1 + 60*x2 e queremos encontrar o máximo dela.
+
+3) Quais são as restrições ? 
+vamos encontrar agora as restrições, que são as limitações da produção.
+
+- Disponibilidade da MPA (matéria prima) = 4.900 kg
+MPA/unidade prod I = 70Kg
+MPA/unidade prod II = 70Kg
+
+70x1 + 70x2 <= 4.900
+
+- Disponibilidade de M.P.B = 4.500
+
+MPB/Unidade prod I = 90Kg
+MPB/Unidade prod II = 50Kg
+
+90*x1 + 50*x2 <= 4.500
+
+- Disponibilidade de M.O prod I: 80h/h
+2*x1 <= 80
+
+- Disponibilidade de M.O prod II: 180h/h
+3*x2 <= 180
+
+- Existe uma outra restrição implícita, que é não poder existir um número negativo de produtos, deve ser maior ou igual a zero. Isto não está escrito mas deve ser deduzido. 
+
+## RESUMO DO MODELO PL:
+
+### Variáveis de decisão
+x1 -> ...
+x2 -> ...
+
+### Função objetiva
+max L = 20*x1 + 60*x2
+
+### Restrições do problema, sujeito à:
+MPA: 70*x1+70*x2 <= 4900
+MPB: 90*x1+50*x2 <= 4500
+MOP1: 2*x1 <= 80
+MOP2: 3*x2 <= 180
+
+### Restrição de não negatividade:
+x1>= 0 e x2 >= 0
+
+
+# Resolução Ex2 
+Empresa produz produtos(P1 e P2). O lucro de P1 é LP1 = 1000*unidadeP1 e LP2 = 1.800*unidadesP2
+20h para produzir P1
+30h para produzir P2.
+Tempo anual de produção é 1.200h
+Demanda anual de P1 = 40 unidades
+Demanda anual de P2 = 30 unidades
+
+Qual o plano de produção para que a empresa maximize os lucros nesses itens?
+
+## PL
+1) Variáveis de decisão
+x1 = Número de unidades de p1 produzidos no próximo ano.
+x2 = Número de unidades de p2 produzidos no próximo ano.
+
+2) Função objetiva
+
+max L = LP1+LP2
+max L = 1000*x1 + 1800*x2
+
+3) Restrições do problema
+
+Tempo Anual de Prodição (TAP): 20h*x1 + 30h*x2 <= 1.200
+DA1 = x1 <= 40
+DA2 = x2 <= 30
+* Neste caso restringe a produção, pois se deixar em aberto para mais, não tem como atender o problema de limitação de tempo de produção anual. 
+
+4) Restrições de não negatividade
+
+x1,x2 >= 0
+
+* Uma outra forma de decidir é fazendo a tabela abaixo, que resume de uma forma prática as informações, quando se está trabalhando com esse tipo de problema.
+
+        |MPA    | MPB   | MO 1  | MO 2  
+________________________________________
+tipo 1  | 70    |   90  |   2   |   -
+________________________________________
+tipo2   | 70    |   50  |   -   |   3
+________________________________________
+        |4900   |4500   |   80  |   180
+
+
+
+# Resolução Ex3
+
+Necessidade MÍNIMA:
+Vitaminas 32
+Proteina 36
+
+Disponibilidade de carne e ovo 
+carne = 4 vitaminas + 6 proteinas
+ovo = 8 vitaminas + 6 proteinas 
+
+Objetivo: Qual a quantidade diária de carne e ovos que deve ser consumida para suprir as necessidades de vitaminas e proteínas com menor custo possível?
+
+carne = 3 UM 
+ovo = 2,5 UM
+
+1) Variáveis de decisão:
+
+x1 = quantidade de carne consumida por uma pessoa.
+x2 = quantidade de ovo consumida por uma pessoa.
+
+2) Função objetiva:
+
+Min C = 3*x1 + 2,5*x2
+
+3) Resitrições do problema
+
+QMV: 4*x1 + 8*x2 >= 32
+QMP: 6*x1 + 6*x2 >= 36
+
+4) Restrições de não negatividade
+x1,x2 >= 0
