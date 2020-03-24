@@ -1,0 +1,27 @@
+Em consequência da queda nos lucros, a direção decidiu modernizar a linha de produtos da
+empresa. Produtos não rentáveis estão sendo descontinuados, liberando capacidade produtiva
+para o lançamento de dois novos produtos com grande potencial de vendas.
+
+fabrica1 = esquadrias de alumínio e ferragens
+fabrica2 = esquadrias de madeira 
+fábrica3 = produz vidro e monta os produtos.
+
+
+1) Variáveis de decisão:
+
+x1 = Lucro produzido pelo produto 1.
+x2 = Lucro produzido pelo produto 2.
+
+2) Função objetiva:
+
+Max L = 150*x1 + 250*x2
+
+3) Resitrições do problema
+
+QMV: 4*x1 + 8*x2 >= 32
+QMP: 6*x1 + 6*x2 >= 36
+
+
+
+4) Restrições de não negatividade
+x1,x2 >= 0
